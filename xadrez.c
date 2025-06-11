@@ -2,55 +2,45 @@
 
 /*
 Desafio de Xadrez - MateCheck
-Nível Novato
+Nível Aventureiro
 
-Neste programa, simulamos a movimentação de três peças de xadrez:
-- Bispo: movimenta-se na diagonal superior direita.
-- Torre: movimenta-se horizontalmente para a direita.
-- Rainha: movimenta-se horizontalmente para a esquerda.
+Neste nível, implementamos a movimentação do Cavalo em L, utilizando:
+- Um loop "for" como estrutura principal;
+- Um loop interno "while" aninhado para representar a sequência do movimento.
 
-Utilizaremos estruturas de repetição para simular os movimentos e 
-exibir as direções na tela com base em comandos predefinidos.
+O Cavalo se moverá em L para baixo e para a esquerda:
+- 2 casas para baixo;
+- 1 casa para a esquerda.
 */
 
 int main() {
     // Introdução ao usuário
     printf("\n===================================\n");
     printf("|| Desafio de Xadrez - MateCheck ||\n");
-    printf("===================================\n\n");
-    printf("Neste programa, simularemos os movimentos de peças de xadrez utilizando loops.\n");
-    printf("Cada peça será movimentada em uma direção específica, com base em suas regras.\n\n");
+    printf("========== Nível Aventureiro ==========\n\n");
 
-    // Constantes que definem o número de casas que cada peça pode se mover
-    const int MOV_BISPO = 5;
-    const int MOV_TORRE = 5;
-    const int MOV_RAINHA = 8;
+    printf("Neste nível, simularemos o movimento da peça Cavalo usando loops aninhados.\n");
+    printf("O Cavalo se moverá em formato L (2 casas para baixo e 1 para a esquerda).\n\n");
 
-    // Movimentação do Bispo
-    printf("Movimentação do Bispo (diagonal superior direita):\n");
-    for (int i = 0; i < MOV_BISPO; i++) {
-        printf("Cima\n");
-        printf("Direita\n");
-    }
+    // Número de movimentos em L que desejamos simular
+    const int MOVIMENTOS_CAVALO = 3; // Podemos aumentar esse valor se quisermos repetir o L mais vezes
 
-    // Movimentação da Torre
-    printf("\nMovimentação da Torre (direita):\n");
-    int i = 0;
-    while (i < MOV_TORRE) {
-        printf("Direita\n");
-        i++;
-    }
+    for (int i = 0; i < MOVIMENTOS_CAVALO; i++) {
+        printf("Movimento em L #%d:\n", i + 1);
 
-    // Movimentação da Rainha
-    printf("\nMovimentação da Rainha (esquerda):\n");
-    int j = 0;
-    do {
+        // Parte 1: movimento vertical (para baixo)
+        int passos_baixo = 0;
+        while (passos_baixo < 2) {
+            printf("Baixo\n");
+            passos_baixo++;
+        }
+
+        // Parte 2: movimento horizontal (para a esquerda)
         printf("Esquerda\n");
-        j++;
-    } while (j < MOV_RAINHA);
 
-    // Fim do programa
-    printf("\nTodas as movimentações foram concluídas com sucesso.\n");
+        printf("\n"); // Separador entre movimentos
+    }
+
+    printf("Movimentações do Cavalo concluídas com sucesso!\n");
 
     return 0;
-}
